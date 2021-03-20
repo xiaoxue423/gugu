@@ -1,0 +1,19 @@
+{
+  "name": "gugu",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaoxue423/gugu.git"
+  },
+  "author": "雪儿",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaoxue423/gugu/issues"
+  },
+  "homepage": "https://github.com/xiaoxue423/gugu#readme"
+}
