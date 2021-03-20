@@ -18,5 +18,8 @@
   "homepage": "https://github.com/xiaoxue423/gugu#readme",
   "dependencies": {
     "vue": "^2.6.12"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
