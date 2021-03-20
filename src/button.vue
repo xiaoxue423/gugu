@@ -1,24 +1,32 @@
 <template>
-    <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
-      <svg v-if="icon" class="icon">
-        <use :xlink:href=`#i-${icon}`></use>
-      </svg>
-      <div class="content">
-        <slot></slot>
-      </div>
-    </button>
+  <button class="g-button" :class="{[`icon-${iconPosition}`]:true}">
+    <g-icon v-if="icon" :name="icon"></g-icon>
+    <div class="content">
+      <slot></slot>
+    </div>
+  </button>
 </template>
 
 <script>
 export default {
   name: "button",
-  props:['icon','iconPosition']
+  // props:['icon','iconPosition']
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: 'left',
+      validator(value) {
+        return value === 'left' || value === 'right'
+      }
+    },
+  }
 }
 </script>
 
 <style scoped lang="scss">
 
-.g-button{
+.g-button {
   height: var(--button-height);
   font-size: var(--font-size);
   padding: 0 1em;
@@ -29,29 +37,36 @@ export default {
   justify-content: center;
   align-items: center;
   vertical-align: middle;
-  >.icon {
+
+  > .icon {
     order: 1;
     margin-right: .3em;
   }
-  >.content {
+
+  > .content {
     order: 2;
   }
-  &.icon-right{
-    >.icon {
+
+  &.icon-right {
+    > .icon {
       order: 2;
       margin-left: .3em;
       margin-right: 0;
     }
-    >.content{
+
+    > .content {
       order: 1;
     }
   }
+
   &:hover {
     border-color: var(--border-color-hover);
   }
+
   &:active {
     background-color: var(--button-active-bg);
   }
+
   &:focus {
     outline: none;
   }
