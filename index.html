@@ -21,7 +21,8 @@
             --border-radius: 4px;
             --color: #333;
             --border-color: #999;
-            --border-color-hover: #666;
+            /*--border-color-hover: #666;*/
+            --border-color-hover: red;
         }
 
         #app {
@@ -49,6 +50,15 @@
     </g-button>
 
     <g-icon name="download"></g-icon>
+
+    <button-group>
+        <div>
+            <g-button icon="left">上一页</g-button>
+        </div>
+
+        <g-button>更多</g-button>
+        <g-button icon="right" icon-position="right">下一页</g-button>
+    </button-group>
 </div>
 <script src="./src/app.js" type="module"></script>
 <script src="//at.alicdn.com/t/font_2239359_usircx8mfzf.js"></script>
